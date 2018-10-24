@@ -13,8 +13,10 @@ class RegisterTest extends TestCase
      *
      * @return void
      */
-    public function testExample()
+    public function testRegisterPage()
     {
-        $this->assertTrue(true);
+        $response = $this->get('/register');
+
+        $response->assertStatus(200);
     }
 }
