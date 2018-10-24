@@ -25,6 +25,10 @@ class UserTest extends TestCase
         $this->assertInstanceof('App\User',$user);
     }
 
+    public function testAttribute(){
+        $this->assertClassHasAttribute('fillable', 'App\User');
+    }
+
 
 
 }
