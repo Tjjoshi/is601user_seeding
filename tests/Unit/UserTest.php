@@ -18,9 +18,11 @@ class UserTest extends TestCase
     {
         $user = User::inrandomorder()->first();
         $this->assertInternalType('int', $user->id);
+          }
 
-       // $this->assertClassHasAttribute('fillable', 'App\User');
-      //  $this->assertEquals($user->id,$user->id);
+    public function testInstanceOf (){
+        $user = User::inrandomorder()->first();
+        $this->assertInstanceof('App\User',$user);
     }
 
 
